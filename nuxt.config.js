@@ -1,4 +1,4 @@
-export default {
+module.exports =  {
   mode: 'spa',
   /*
    ** Headers of the page
@@ -15,6 +15,11 @@ export default {
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+  },
+  build: {
+    vendor: [
+      'vuex',
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -51,9 +56,9 @@ export default {
    ** Build configuration
    */
   build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {}
+      /*
+      ** You can extend webpack config here
+      */
+      extend(config, ctx) {}
   }
 }

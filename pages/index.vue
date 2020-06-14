@@ -19,6 +19,13 @@
         >
           GitHub
         </a>
+        <a
+          href="http://localhost:3000/todos"
+          target="_blank"
+          class="button--grey"
+        >
+          todo
+        </a>
       </div>
     </div>
   </div>
