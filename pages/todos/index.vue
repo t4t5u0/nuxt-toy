@@ -1,8 +1,14 @@
 <template>
+<!-- <template>: コンポーネントのhtmlを埋め込む -->
   <ul>
     <li v-for="todo in todos" :key="todo.id">
+      <!-- v-for で 配列などプロパティに対するイテレーションを書く -->
+      <!-- リストレンダリング https://jp.vuejs.org/v2/guide/list.html -->
+      <!-- :key を第二引数にすることで、 -->
       <input type="checkbox" :checked="todo.done" @change="toggle(todo)" />
       <span :class="{ done: todo.done }">{{ todo.text }}</span>
+      <!-- :class="{YOUR_CLASS: boolean}" で動的にCSSを適用できる -->
+      <!-- {{ }}  でVueインスタンスの要素を呼び出すことができる。 -->
       <button @click="removeTodo(todo)">remove</button>
     </li>
     <li>
@@ -13,7 +19,6 @@
 
 <script>
 import { mapMutations } from 'vuex'
-
 export default {
   computed: {
     todos() {
