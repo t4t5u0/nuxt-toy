@@ -11,6 +11,7 @@ export const mutations = {
     })
   },
   remove(state, { todo }) {
+    // console.log(state.list)
     state.list.splice(state.list.indexOf(todo), 1)
   },
   toggle(todo) {
